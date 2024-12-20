@@ -1,0 +1,18 @@
+{
+    "providers": [
+        {
+            "blockchain": "Ethereum",
+            "name": "Chainstack",
+            "region": "Global",
+            "websocket_endpoint": "wss://ethereum-mainnet...",
+            "http_endpoint": "https://ethereum-mainnet...",
+            "data": {
+                "to": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "from": "0x0000000000000000000000000000000000000000",
+                "data": "0x70a082310000000000000000000000004d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8",
+                "gas": "0x5208",
+                "value": "0x0"
+            }
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "api/chains/ethereum.py": {
+      "maxDuration": 60
+    },
+    "api/chains/base.py": {
+      "maxDuration": 60
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/chains/ethereum",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/chains/base",
+      "schedule": "0 0 * * *"
+    }
+  ],
+  "regions": ["fra1", "sin1", "sfo1"]
+}

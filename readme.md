@@ -1,4 +1,4 @@
-# RPC Latency Monitor
+# Chainstack dashboard functions
 
 Serverless solution for monitoring RPC nodes latency across different blockchains and regions using Vercel Functions.
 

@@ -2,3 +2,4 @@
 *.env
 endpoints.json
 venv
+.vercel

@@ -125,8 +125,19 @@ class BaseVercelHandler(BaseHTTPRequestHandler):
 
     metrics_handler: MetricsHandler = None
 
-    def do_GET(self):  # pylint: disable=invalid-name
-        """Handle GET requests."""
+    def validate_token(self):
+        auth_token = self.headers.get("Authorization")
+        expected_token = os.environ.get("API_SECRET")
+        return auth_token == f"Bearer {expected_token}"
+
+    def do_GET(self):
+        if not self.validate_token():
+            self.send_response(401)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write("Unauthorized".encode("utf-8"))
+            return
+
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         try:
